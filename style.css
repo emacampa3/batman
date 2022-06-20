@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #0a171c;
+  background-image: radial-gradient(circle, #4c7180 0%, #28424d 30%, #1d3741 40%, #192f38 50%,#0a171c 100%);
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #24384e;
+}
+
+body .container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0 auto;
+}
+
+body .container :before, 
+body .container :after {
+  position: absolute;
+  content: "";
+}
+
+.batman-container {
+  position: absolute;
+  top: calc(50% - (250px / 2));
+  left: calc(50% - (75px / 2));
+}
+
+.batman {
+  height: 85px;
+  width: 76px;
+  margin: 74px auto 0 auto;
+  position: relative;
+}
+
+.batman * {
+  position: absolute;
+}
+
+.batman .head {
+  top: -71px;
+  left: calc(50% - (63px / 2));
+  width: 63px;
+  height: 67px;
+  background-image: radial-gradient(circle, #f5c192 0%, #744f2d 100%);
+  box-shadow: inset 15px -3px 4px 1px #6a4736, inset -18px 0px 2px 1px #6a4736;
+  border-radius: 25%;
+}
+
+.batman .head .eye {
+  top: 23px;
+  left: 9px;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  box-shadow: inset 4px 1px 4px 0 #373737;
+  border-radius: 50%;
+}
+
+.batman .head .eye:before {
+  top: 9px;
+  left: -10px;
+  background-color: #303030;
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.batman .head .eye-mask {
+  top: 2px;
+  left: 14px;
+}
+
+.batman .head .eye-mask.right {
+  left: -7px;
+}
+
+.batman .head .eye.right {
+  transform: rotateY(180deg);
+  left: 37px;
+}
+
+.mask-underlay {
+  top: 70px;
+  left: 61px;
+}
+
+.batman .head .mask-correction {
+  top: 38px;
+  left: 4px;
+  width: 1px;
+  height: 26px;
+  background-color: #141414;
+  transform: rotate(13deg);
+}
+
+.batman .head .left-shadow {
+  top: 70px;
+  left: 62px;
+}
+
+.batman .head .lower-mask-shadow {
+  top: 59px;
+  left: 15px;
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(90deg, #333333 10%, #242626 20%,#242626 80%, #333333 90%);
+}
+
+.batman .head .left-ear-shadow {
+  top: 67px;
+  left: 66px;
+}
+
+.batman .head .right-light {
+  top: 70px;
+  left: -4px;
+}
+
+.batman .head .right-ear-shadow {
+  top: 67px;
+  left: -8px;
+}
+
+.batman .head .left-ear-shadow-correction {
+  top: 68px;
+  left: 66px;
+}
+
+.batman .head .left-underear {
+  top: 62px;
+  left: 57px;
+}
+
+.batman .head .left-above-eye {
+  left: 24px;
+  top: 25px;
+}
+
+.batman .head .shadow-above-left-eye {
+  top: 15px;
+  left: 13px;
+  transform: rotate(-10deg);
+}
+
+.batman .head .shadow-above-left-eye-2 {
+  top: 25px;
+  left: 25px;
+}
+
+.forehead {
+  top: 2px;
+  left: 16px;
+  width: 30px;
+  height: 10px;
+  background: linear-gradient(#1c1d1d 0%, #2F2F2F 35%, #1c1d1d 100%);
+}
+
+.batman .head .right-underear {
+  top: 62px;
+  left: 1px;
+}
+
+.batman .head .right-above-eye {
+  left: 34px;
+  top: 25px;
+}
+
+.batman .head .shadow-above-right-eye {
+  left: 45px;
+  top: 15px;
+  transform: rotate(10deg);
+}
+
+.batman .head .shadow-above-right-eye-2 {
+  top: 25px;
+  left: 33px;
+}
+
+.batman .head .right-ear-shadow-correction {
+  top: 68px;
+  left: -8px;
+}
+
+.batman .head .right-ear-light-correction {
+  top: 68px;
+  left: -8px;
+}
+
+.batman .head .left-ear-light-correction {
+  top: 68px;
+  left: 65px;
+}
+
+.batman .head .mask-left-cheek-correction {
+  top: 45px;
+  left: 28px;
+}
+
+.batman .head .mask-right-cheek-correction {
+  top: 45px;
+  left: 29px;
+}
+
+.mouth {
+  top: 34px;
+  left: 30%;
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+}
+
+.mouth-shadow {
+  top: 3px;
+  right: 5px;
+  background-color: transparent;
+  transform: rotate(8deg);
+}
+
+.inner-mouth {
+  top: 5px;
+  left: 1px;
+  background-color: transparent;
+  transform: rotate(8deg);
+}
+
+.batman .head .mouth:before {
+  top: 16px;
+  left: 14px;
+  height: 0;
+  width: 0;
+  border: 1px solid transparent;
+  border-right-color: #333333;
+  border-right-width: 5px;
+  z-index: 10;
+}
+
+.chin {
+  bottom: -15px;
+  left: 25px;
+}
+
+.neck {
+  position: absolute;
+  top: -5px;
+  left: 17px;
+  width: 42px;
+  height: 5px;
+  background: linear-gradient(90deg, #191a1a 15%, #3f4141 50%, #191a1a 85%);
+  box-shadow: inset 0 2px 0 0 #171818;
+}
+
+.cape-around-neck {
+  top: -2px;
+  left: 62px;
+}
+
+.cape-around-neck.left {
+  transform: rotateY(180deg);
+  left: 18px;
+  top: -3px;
+}
+
+.cape .cape-biggest-part {
+  left: 85px;
+}
+
+.batman .body {
+  position: relative;
+  top: 0;
+  left: calc(50% - ((73px + 24px) / 2));
+  height: 0;
+  width: 73px;
+  border-style: solid;
+  border-width: 0 11.5px 85px 11.5px;
+  border-color: transparent transparent #1c1d1d transparent;
+  z-index: 4;
+}
+
+.batman .body:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 80px;
+  background: transparent;
+  box-shadow: -6px 1px 0 0 #353535;
+  transform: rotate(7deg);
+}
+
+.batman .body:after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  width: 1px;
+  height: 80px;
+  background: transparent;
+  box-shadow: 78px 0 0 0 #111111;
+  transform: rotate(-7deg);
+}
+
+.ellipse {
+  top: 6px;
+  left: 11px;
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #F4B702;
+}
+
+.batman-sign {
+  top: 4px;
+}
+
+.batman .body .upper-abs {
+  top: 31px;
+  left: -34px;
+  width: 80px;
+  height: 50px;
+  transform: rotate(5deg);
+}
+
+.batman .body .upper-abs.right {
+  transform: rotateY(180deg) rotate(5deg);
+  top: 31px;
+  left: 28px;
+}
+
+.batman .body .side-ribs {
+  top: 36px;
+  left: -18px;
+}
+
+.batman .body .side-ribs.right {
+  transform: rotateY(180deg);
+  left: 92px;
+}
+
+.batman .body .abs-1 {
+  top: 52px;
+  left: 13px;
+  transform: rotate(2deg);
+}
+
+.batman .body .abs-1.right {
+  transform: rotate(-2deg) rotateY(180deg);
+  top: 53px;
+  right: 12px;
+}
+
+.batman .body .abs-2 {
+  top: 63px;
+  left: 13px;
+  transform: rotate(2deg);
+}
+
+.batman .body .abs-2.right {
+  transform: rotate(-2deg) rotateY(180deg);
+  top: 64px;
+  right: 12px;
+}
+
+.batman .body .abs-3 {
+  top: 73px;
+  left: 13px;
+  transform: rotate(2deg);
+}
+
+.batman .body .abs-3.right {
+  transform: rotate(-2deg) rotateY(180deg);
+  top: 74px;
+  right: 12px;
+}
+
+.batman .body .upper-line {
+  top: -1px;
+  left: 2px;
+  width: 75px;
+  height: 10px;
+}
+
+.batman .body .shadow {
+  top: 63px;
+  left: -35px;
+  transform: rotate(5deg);
+}
+
+.batman .body .shadow.right {
+  transform: rotate(-5deg) rotateY(180deg);
+  top: 63px;
+  left: -43px;
+}
+
+.batman .shoulder  {
+  top: 2px;
+  width: 24px;
+  height: 54px;
+  background: #1c1d1d;
+  left: -22px;
+  transform: rotate(25deg);
+  border-radius: 50px 20px 0 0;
+  box-shadow: inset -15px 0 1px -5px #0000006e;
+  overflow: hidden;
+}
+
+.glare {
+  height: 80px;
+  width: 28px;
+  left: 19px;
+  top: 1px;
+  border-left: #ffffff2c 1px solid;
+  border-radius: 10px/15px;
+  transform: scaleX(2.1);
+}
+
+.glare-shadow {
+  width: 16px;
+  height: 100%;
+  left: -5px;
+  background: linear-gradient(to bottom, #1c1d1d00 0%, #1c1d1da6 10%, #1c1d1d 30%);
+  top: 11px;
+}
+
+.batman .shoulder.right {
+  transform: rotateY(180deg) rotate(25deg);
+  left: 73px;
+}
+
+.batman .arm {
+  bottom: 3px;
+  width: 24px;
+  height: 35px;
+  background: #1c1d1d;
+  border-radius: 15% 15% 50% 50%/15% 15% 10% 10%;
+  overflow: hidden;
+  left: -35px;
+  transform: rotate(8deg);
+  box-shadow: inset -10px 0 1px -5px #0000006e;
+}
+
+.glare-arm {
+  width: 5px;
+  top: 2px;
+  left: 3px;
+  height: 100%;
+  background: #ffffff2c;
+  border-radius: 5px;
+}
+
+.glare-shadow-arm {
+  width: 10px;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #1c1d1d00 0%, #1c1d1d 60%);
+}
+
+.batman .arm.right {
+  transform: rotateY(180deg) rotate(10deg);
+  left: 86px;
+}
+
+.batman .hand {
+  left: -40px;
+  bottom: -19px;
+  height: 11px;
+  width: 11px;
+  border: 6px solid #242424;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-shadow: -1px -1px 0 -1px #616161, 3px -1px 0 -1px #1c1d1d, inset 4px 2px 0 -2px #1c1d1d;
+  transform: rotate(5deg);
+}
+
+.batman .hand:after {
+  bottom: -3px;
+  left: -4px;
+  height: 6px;
+  width: 7px;
+  background: #242424;
+  border-radius: 50%;
+  box-shadow: 13px 0 0 0 #242424;
+}
+
+.batman .hand .wrist {
+  top: -11px;
+  left: calc(50% - 4px);
+  height: 10px;
+  width: 9px;
+  background: #242424;
+  border-radius: 2px 2px 0 0;
+  box-shadow: 4px -2px 0 -2px #1c1d1d;
+}
+
+.batman .hand .wrist::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: calc(50% - 13px);
+  width: 23px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0e0e0e;
+  z-index: -1;
+}
+
+.batman .hand.right {
+  transform: rotateY(180deg) rotate(10deg);
+  left: 94px;
+}
+
+.batman .belt {
+  bottom: -8px;
+  left: 10%;
+  width: 60px;
+  height: 14px;
+  background: #F4B702;
+  z-index: 10;
+}
+
+.batman .belt .buckle {
+  top: -1px;
+  height: 16px;
+  width: 20px;
+  left: calc(50% - 10px);
+  border-radius: 2px;
+  background: #F4B702;
+  box-shadow: 0 1px 10px 1px #313131;
+  z-index: 10;
+}
+
+.batman .belt .bag {
+  height: 16px;
+  width: 15px;
+  top: -1px;
+  left: -18px;
+  border-radius: 2px 1px 1px 2px;
+  background: #F4B702;
+  z-index: 10;
+}
+
+.batman .belt .bag:before {
+  width: 15px;
+  height: 16px;
+  left: 15px;
+  border-radius: 1px 2px 2px 1px;
+  background: #F4B702;
+}
+
+.batman .belt .bag:after {
+  width: 1px;
+  top: 3px;
+  left: 14px;
+  border-bottom: 10px solid hsl(45, 94%, 43%);
+}
+
+.batman .belt .bag.right {
+  transform: rotateY(180deg);
+  left: 63px;
+}
+
+.batman .pelvis {
+  bottom: -45px;
+  left: calc(50% - (93px / 2));
+  width: 93px;
+  height: 36px;
+  background: #191a1a;
+  box-shadow: inset 0 15px 0 -8px #181818, inset 0 -20px 0 -15px #111111;
+  border-bottom: 1px solid #292929;
+}
+
+.batman .pelvis:before {
+  left: calc(50% - (6px / 2) - 1px);
+  width: 6px;
+  height: calc(100% - 2px);
+  border: 1px solid #222222;
+  border-top: 0;
+  box-shadow: inset 1px 0 0 #4F4F4F;
+}
+
+.batman .pelvis .light {
+  top: 7px;
+  left: 2px;
+  width: 41px;
+  height: 10px;
+  background: linear-gradient(0deg, #1c1d1d 30%, #212222 50%, #464646 95%, #ffffff35 100%);
+}
+
+.batman .pelvis .light:after {
+  left: 50px;
+  width: 41px;
+  height: 10px;
+  background: linear-gradient(0deg, #1c1d1d 30%, #212222 50%, #464646 95%, #ffffff35 100%);
+}
+
+.batman .pelvis .leg {
+  bottom: -53px;
+  width: 42.5px;
+  height: 52px;
+  background: #191a1a;
+  box-shadow: inset 2px 0 0 #464646;
+}
+
+.batman .pelvis .leg.right {
+  right: 0;
+}
+
+.batman .pelvis .leg.right:before {
+  z-index: 100;
+  content: "";
+  position: absolute;
+  top: -36px;
+  width: 1px;
+  height: 87px;
+  background: transparent;
+  box-shadow: -51px 1px 0 0 #4b4b4b;
+}
+
+.batman .pelvis .leg.right:after {
+  content: "";
+  position: absolute;
+  top: -36px;
+  width: 1px;
+  height: 86px;
+  background: transparent;
+  box-shadow: 41px 1px 0 0 #101010;
+}
+
+.batman .pelvis .leg .foot {
+  bottom: 0;
+  right: -1px;
+  height: 15px;
+  width: 100%;
+  box-shadow: 0 -5px 0 -4px #303030;
+}
+
+.batman .pelvis .leg .foot:before {
+  top: 0;
+  left: 4px;
+  width: 80%;
+  height: 2px;
+  border-top: none;
+  background: #0a0a0a;
+}
+
+.batman .shadow {
+  bottom: -101px;
+  width: 150px;
+  left: 20px;
+  height: 100px;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 80%, #0000001c, #00000010 35%, #00000000 45%);
+  transform: skewX(-50deg);
+}
